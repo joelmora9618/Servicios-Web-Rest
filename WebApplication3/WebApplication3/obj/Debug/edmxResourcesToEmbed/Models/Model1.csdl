@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="practica7Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="alumno">
+    <Key>
+      <PropertyRef Name="dni_alumno" />
+    </Key>
+    <Property Name="dni_alumno" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellido" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="edad" Type="Int32" Nullable="false" />
+    <Property Name="sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="divicion" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="practica7Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="alumno" EntityType="Self.alumno" />
+  </EntityContainer>
+</Schema>
