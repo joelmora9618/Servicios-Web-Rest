@@ -13,10 +13,10 @@ namespace WebApplication3.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class practica7Entities : DbContext
+    public partial class JEMPracticas_dbEntities : DbContext
     {
-        public practica7Entities()
-            : base("name=practica7Entities")
+        public JEMPracticas_dbEntities()
+            : base("name=JEMPracticas_dbEntities")
         {
         }
     
@@ -26,5 +26,8 @@ namespace WebApplication3.Models
         }
     
         public virtual DbSet<alumno> alumno { get; set; }
+        public virtual DbSet<curso> curso { get; set; }
+        public virtual DbSet<materia> materia { get; set; }
+        public virtual DbSet<profesores> profesores { get; set; }
     }
 }

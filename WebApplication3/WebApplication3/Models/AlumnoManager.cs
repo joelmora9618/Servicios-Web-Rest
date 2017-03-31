@@ -10,6 +10,8 @@ namespace WebApplication3.Models
     public class AlumnoManager
     {
         String cadenaConexion = @"Data Source=WKS831L;Initial Catalog=practica7;Integrated Security=True";
+       // String cadenaConexion = @"Data Source=jempracticasdbserver.database.windows.net;Initial Catalog=JEMPracticas_db;Persist Security Info=True;User ID=joelmora9618;Password=Centinela1;MultipleActiveResultSets=True;Application Name=EntityFramework";
+
 
         public bool InsertarAlumno(alumno alu)
         {

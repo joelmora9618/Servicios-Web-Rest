@@ -37,4 +37,51 @@ public class Alumno {
         this.divicion = divicion;
     }
 
+    public int getDni_alumno() {
+        return dni_alumno;
+    }
+
+    public void setDni_alumno(int dni_alumno) {
+        this.dni_alumno = dni_alumno;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getDivicion() {
+        return divicion;
+    }
+
+    public void setDivicion(String divicion) {
+        this.divicion = divicion;
+    }
 }

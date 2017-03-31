@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="practica7Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="JEMPracticas_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="alumno">
           <Key>
             <PropertyRef Name="dni_alumno" />
@@ -14,16 +14,45 @@
           <Property Name="apellido" Type="varchar" MaxLength="25" Nullable="false" />
           <Property Name="edad" Type="int" Nullable="false" />
           <Property Name="sexo" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="divicion" Type="varchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="curso">
+          <Key>
+            <PropertyRef Name="divicion" />
+          </Key>
+          <Property Name="divicion" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="turno" Type="varchar" MaxLength="35" Nullable="false" />
+        </EntityType>
+        <EntityType Name="materia">
+          <Key>
+            <PropertyRef Name="id_materia" />
+          </Key>
+          <Property Name="id_materia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="dni_profesor" Type="int" />
+          <Property Name="materia" Type="varchar" MaxLength="35" Nullable="false" />
           <Property Name="divicion" Type="varchar" MaxLength="5" />
         </EntityType>
-        <EntityContainer Name="practica7ModelStoreContainer">
+        <EntityType Name="profesores">
+          <Key>
+            <PropertyRef Name="dni_profesor" />
+          </Key>
+          <Property Name="dni_profesor" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="apellido" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="edad" Type="int" Nullable="false" />
+          <Property Name="id_materia" Type="int" />
+          <Property Name="divicion" Type="varchar" MaxLength="2" />
+        </EntityType>
+        <EntityContainer Name="JEMPracticas_dbModelStoreContainer">
           <EntitySet Name="alumno" EntityType="Self.alumno" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="curso" EntityType="Self.curso" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="materia" EntityType="Self.materia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="profesores" EntityType="Self.profesores" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="practica7Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="JEMPracticas_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="alumno">
           <Key>
             <PropertyRef Name="dni_alumno" />
@@ -33,25 +62,85 @@
           <Property Name="apellido" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="edad" Type="Int32" Nullable="false" />
           <Property Name="sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="divicion" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="curso">
+          <Key>
+            <PropertyRef Name="divicion" />
+          </Key>
+          <Property Name="divicion" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="turno" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="materia">
+          <Key>
+            <PropertyRef Name="id_materia" />
+          </Key>
+          <Property Name="id_materia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dni_profesor" Type="Int32" />
+          <Property Name="materia1" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="divicion" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="practica7Entities" annotation:LazyLoadingEnabled="true">
+        <EntityType Name="profesores">
+          <Key>
+            <PropertyRef Name="dni_profesor" />
+          </Key>
+          <Property Name="dni_profesor" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="apellido" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="edad" Type="Int32" Nullable="false" />
+          <Property Name="id_materia" Type="Int32" />
+          <Property Name="divicion" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="JEMPracticas_dbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="alumno" EntityType="Self.alumno" />
+          <EntitySet Name="curso" EntityType="Self.curso" />
+          <EntitySet Name="materia" EntityType="Self.materia" />
+          <EntitySet Name="profesores" EntityType="Self.profesores" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="practica7ModelStoreContainer" CdmEntityContainer="practica7Entities">
+        <EntityContainerMapping StorageEntityContainer="JEMPracticas_dbModelStoreContainer" CdmEntityContainer="JEMPracticas_dbEntities">
           <EntitySetMapping Name="alumno">
-            <EntityTypeMapping TypeName="practica7Model.alumno">
+            <EntityTypeMapping TypeName="JEMPracticas_dbModel.alumno">
               <MappingFragment StoreEntitySet="alumno">
                 <ScalarProperty Name="dni_alumno" ColumnName="dni_alumno" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="apellido" ColumnName="apellido" />
                 <ScalarProperty Name="edad" ColumnName="edad" />
                 <ScalarProperty Name="sexo" ColumnName="sexo" />
+                <ScalarProperty Name="divicion" ColumnName="divicion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="curso">
+            <EntityTypeMapping TypeName="JEMPracticas_dbModel.curso">
+              <MappingFragment StoreEntitySet="curso">
+                <ScalarProperty Name="divicion" ColumnName="divicion" />
+                <ScalarProperty Name="turno" ColumnName="turno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="materia">
+            <EntityTypeMapping TypeName="JEMPracticas_dbModel.materia">
+              <MappingFragment StoreEntitySet="materia">
+                <ScalarProperty Name="id_materia" ColumnName="id_materia" />
+                <ScalarProperty Name="dni_profesor" ColumnName="dni_profesor" />
+                <ScalarProperty Name="materia1" ColumnName="materia" />
+                <ScalarProperty Name="divicion" ColumnName="divicion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="profesores">
+            <EntityTypeMapping TypeName="JEMPracticas_dbModel.profesores">
+              <MappingFragment StoreEntitySet="profesores">
+                <ScalarProperty Name="dni_profesor" ColumnName="dni_profesor" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellido" ColumnName="apellido" />
+                <ScalarProperty Name="edad" ColumnName="edad" />
+                <ScalarProperty Name="id_materia" ColumnName="id_materia" />
                 <ScalarProperty Name="divicion" ColumnName="divicion" />
               </MappingFragment>
             </EntityTypeMapping>

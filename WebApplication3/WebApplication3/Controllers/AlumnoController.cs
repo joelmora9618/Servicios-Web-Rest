@@ -9,7 +9,7 @@ namespace WebApplication3.Controllers
 {
     public class AlumnoController : Controller
     {
-        practica7Entities entidad = new practica7Entities();
+        JEMPracticas_dbEntities entidad = new JEMPracticas_dbEntities();
         AlumnoManager alumnoManager;
 
         public AlumnoController()
