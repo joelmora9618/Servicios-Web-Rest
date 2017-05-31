@@ -20,5 +20,7 @@ namespace WebApplication3.Models
         public int edad { get; set; }
         public string sexo { get; set; }
         public string divicion { get; set; }
+    
+        public virtual curso curso { get; set; }
     }
 }

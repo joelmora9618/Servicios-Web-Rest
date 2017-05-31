@@ -9,7 +9,7 @@ namespace WebApplication3.Controllers
 {
     public class AlumnoController : Controller
     {
-        JEMPracticas_dbEntities entidad = new JEMPracticas_dbEntities();
+        JemDBaseEntities entidad = new JemDBaseEntities();
         AlumnoManager alumnoManager;
 
         public AlumnoController()
@@ -24,6 +24,11 @@ namespace WebApplication3.Controllers
             //var lista = entidad.alumno.ToList();
             // return View(lista.ToList());
             return this.Json(alumnoManager.ObtenerAlumno(), JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult Insert(alumno item)
+        {
+            return Json(alumnoManager.InsertarAlumno(item), JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult Alumno(int? dni, alumno item)

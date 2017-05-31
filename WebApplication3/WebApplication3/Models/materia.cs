@@ -15,8 +15,11 @@ namespace WebApplication3.Models
     public partial class materia
     {
         public int id_materia { get; set; }
-        public Nullable<int> dni_profesor { get; set; }
         public string materia1 { get; set; }
         public string divicion { get; set; }
+        public Nullable<int> dni_profesor { get; set; }
+    
+        public virtual curso curso { get; set; }
+        public virtual profesores profesores { get; set; }
     }
 }

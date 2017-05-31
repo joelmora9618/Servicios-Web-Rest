@@ -9,25 +9,28 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.jmora.webservicesoap.AltaAlumnoActivity">
+    tools:context="com.example.jmora.webservicesoap.ui.activities.AltaAlumnoActivity">
 
     <EditText
         android:id="@+id/etDni"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ingrese su DNI"
+        android:maxLength="8"
         android:inputType="number"/>
 
     <EditText
         android:id="@+id/etNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="text"
         android:hint="Ingrese su Nombre"/>
 
     <EditText
         android:id="@+id/etApellido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="text"
         android:hint="Ingrese su Apellido"/>
 
     <EditText
@@ -41,13 +44,31 @@
         android:id="@+id/etSexo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ingrese su Sexo"/>
+        android:hint="Sexo"/>
 
-    <EditText
-        android:id="@+id/etDivicion"
+    <Spinner
+        android:id="@+id/etSector"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ingrese su Divicion"/>
+        android:text="Sector"/>
+
+    <Spinner
+        android:id="@+id/etPiso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Piso"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"/>
+
+    <EditText
+        android:id="@+id/etRepeatPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Repita su password"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -56,10 +77,10 @@
         android:gravity="bottom">
 
         <Button
-            android:id="@+id/btnEnviar"
+            android:id="@+id/btnSign"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enviar"/>
+            android:text="Registrar"/>
 
     </LinearLayout>
 

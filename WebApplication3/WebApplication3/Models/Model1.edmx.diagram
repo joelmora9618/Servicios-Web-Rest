@@ -4,11 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2d8441e480564fa385d1485da9f5f2b5" Name="Diagram1">
-        <EntityTypeShape EntityType="JEMPracticas_dbModel.alumno" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="JEMPracticas_dbModel.curso" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="JEMPracticas_dbModel.materia" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="JEMPracticas_dbModel.profesores" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+      <Diagram DiagramId="07fd20aa15d44b49b3f9507569c5ddf7" Name="Diagram1">
+        <EntityTypeShape EntityType="JemDBaseModel.alumno" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JemDBaseModel.curso" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JemDBaseModel.materia" Width="1.5" PointX="5.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JemDBaseModel.profesores" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JemDBaseModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="JemDBaseModel.FK_alumno_curso" ManuallyRouted="false" />
+        <AssociationConnector Association="JemDBaseModel.FK_materia_curso" ManuallyRouted="false" />
+        <AssociationConnector Association="JemDBaseModel.FK_profesores_curso" ManuallyRouted="false" />
+        <AssociationConnector Association="JemDBaseModel.FK_materia_profesores" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

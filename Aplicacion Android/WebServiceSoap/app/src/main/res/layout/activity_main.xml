@@ -20,11 +20,5 @@
         android:text="Lista Alumnos"
         android:layout_gravity="center_horizontal"/>
 
-    <Button
-        android:id="@+id/btnAlta"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Agregar Alumno"
-        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>

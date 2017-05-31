@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8f59dee4517d458792b81e2fe40e763a" Name="Diagram1">
+        <EntityTypeShape EntityType="Jem96DbModel.dias_semana" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Jem96DbModel.empleado" Width="1.5" PointX="6" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Jem96DbModel.grupo" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Jem96DbModel.home" Width="1.5" PointX="8.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Jem96DbModel.piso" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Jem96DbModel.sector" Width="1.5" PointX="3.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Jem96DbModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <AssociationConnector Association="Jem96DbModel.FK_dias_semana_grupo" ManuallyRouted="false" />
+        <AssociationConnector Association="Jem96DbModel.FK_dias_semana_home" ManuallyRouted="false" />
+        <AssociationConnector Association="Jem96DbModel.FK_empleado_grupo" ManuallyRouted="false" />
+        <AssociationConnector Association="Jem96DbModel.FK_empleado_piso" ManuallyRouted="false" />
+        <AssociationConnector Association="Jem96DbModel.FK_empleado_sector" ManuallyRouted="false" />
+        <AssociationConnector Association="Jem96DbModel.FK_home_empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="Jem96DbModel.FK_sector_piso" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

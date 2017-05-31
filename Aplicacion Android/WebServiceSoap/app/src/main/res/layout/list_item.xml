@@ -3,6 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="150dp"
     android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
     android:background="@drawable/item_drawable">
 
     <ImageView
@@ -14,38 +17,14 @@
         android:background="@drawable/man_user"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="10dp"
-        android:layout_toRightOf="@+id/ivUser">
+        android:layout_toRightOf="@+id/ivUser"
+        android:gravity="center_vertical"
+        android:background="@drawable/background_item">
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                style="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Dni:"
-                android:paddingLeft="16dp"
-                android:paddingRight="10dp"
-                android:textColor="@android:color/holo_green_light"
-                android:id="@+id/textView1"
-                android:textSize="17dp"/>
-
-            <TextView
-                style="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/holo_green_light"
-                android:id="@+id/tvDni"
-                android:text="123"
-                android:textSize="17dp"/>
-
-        </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -59,7 +38,7 @@
                 android:text="Nombre:"
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
-                android:textColor="@android:color/holo_green_light"
+                android:textColor="@android:color/holo_orange_dark"
                 android:id="@+id/textView2"
                 android:textSize="17dp"/>
 
@@ -67,9 +46,10 @@
                 style="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/holo_green_light"
+                android:textColor="@android:color/holo_orange_dark"
                 android:id="@+id/tvNombre"
                 android:text="123"
+                android:layout_gravity="right"
                 android:textSize="17dp"/>
 
         </LinearLayout>
@@ -86,7 +66,7 @@
                 android:text="Apellido:"
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
-                android:textColor="@android:color/holo_green_light"
+                android:textColor="@android:color/holo_orange_dark"
                 android:id="@+id/textView3"
                 android:textSize="17dp"/>
 
@@ -94,7 +74,7 @@
                 style="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/holo_green_light"
+                android:textColor="@android:color/holo_orange_dark"
                 android:id="@+id/tvApellido"
                 android:text="123"
                 android:textSize="17dp"/>
@@ -113,7 +93,7 @@
                 android:text="Edad:"
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
-                android:textColor="@android:color/holo_green_light"
+                android:textColor="@android:color/holo_orange_dark"
                 android:id="@+id/textView4"
                 android:textSize="17dp"/>
 
@@ -121,39 +101,13 @@
                 style="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/holo_green_light"
+                android:textColor="@android:color/holo_orange_dark"
                 android:id="@+id/tvEdad"
                 android:text="123"
                 android:textSize="17dp"/>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                style="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sexo:"
-                android:paddingLeft="16dp"
-                android:paddingRight="10dp"
-                android:textColor="@android:color/holo_green_light"
-                android:id="@+id/textView5"
-                android:textSize="17dp"/>
-
-            <TextView
-                style="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/holo_green_light"
-                android:id="@+id/tvSexo"
-                android:text="123"
-                android:textSize="17dp"/>
-
-        </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -164,10 +118,10 @@
                 style="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Divición:"
+                android:text="Sector:"
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
-                android:textColor="@android:color/holo_green_light"
+                android:textColor="@android:color/holo_orange_dark"
                 android:id="@+id/textView6"
                 android:textSize="17dp"/>
 
@@ -175,7 +129,7 @@
                 style="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/holo_green_light"
+                android:textColor="@android:color/holo_orange_dark"
                 android:id="@+id/tvDivicion"
                 android:text="123"
                 android:textSize="17dp"/>
